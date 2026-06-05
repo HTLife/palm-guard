@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local virtualenv used for development/testing
+/.venv/
+
+# Recorded sessions & runtime logs (machine-specific data)
+session_*.json
+session_*.report.txt
+*.log
+
+# Editor
+*.swp
+*.swo
+*~
+
+# OMC / tooling scratch
+.omc/

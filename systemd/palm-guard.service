@@ -1,0 +1,17 @@
+[Unit]
+Description=MacBook-style touchpad palm rejection (palm-guard)
+Documentation=https://github.com/USERNAME/palm-guard
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+# Tune --window (ms) and palm zones here; see `palm_guard.py --help`.
+ExecStart=%h/.local/share/palm-guard/run.sh --window 300
+# Belt-and-suspenders: re-enable tap-to-click on stop (daemon also does this on SIGTERM).
+ExecStopPost=%h/.local/share/palm-guard/restore-tapping.sh
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target
