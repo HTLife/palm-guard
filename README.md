@@ -1,6 +1,6 @@
 # palm-guard
 
-**MacBook-style palm rejection for Linux laptops whose touchpad reports no
+**Palm rejection for Linux laptops whose touchpad reports no
 pressure or contact size** (e.g. Lenovo Legion 5 / Synaptics `SYNA2BA6`).
 
 If you mis-click while typing because your palm brushes the trackpad, this fixes
