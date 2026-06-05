@@ -7,7 +7,9 @@ venv/
 # Local virtualenv used for development/testing
 /.venv/
 
-# Recorded sessions & runtime logs (machine-specific data)
+# Dev/debug scratch: recorded sessions, reports, runtime logs (machine-specific)
+dev-tmp/
+# (kept as safety nets in case anything is written outside dev-tmp/)
 session_*.json
 session_*.report.txt
 *.log

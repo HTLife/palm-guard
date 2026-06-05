@@ -10,6 +10,7 @@ Run:  ./.venv/bin/python palm_logger.py
 Needs: membership in the `input` group (no sudo).
 """
 
+import os
 import sys
 import time
 import json
@@ -334,7 +335,9 @@ class MainWindow(QtWidgets.QMainWindow):
     # ---- save + analyze ----
     def save_and_analyze(self):
         ts = time.strftime("%Y%m%d_%H%M%S")
-        base = f"/home/jacky24/Desktop/palm_rejection/session_{ts}"
+        outdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dev-tmp")
+        os.makedirs(outdir, exist_ok=True)
+        base = os.path.join(outdir, f"session_{ts}")
         data = {
             "device": self.dev.name,
             "maxx": self.MAXX, "maxy": self.MAXY,

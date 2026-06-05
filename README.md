@@ -121,12 +121,12 @@ python3 -m venv --system-site-packages .venv
 ```
 
 Click **Start**, type naturally for ~30–60 s (reproduce your mis-clicks), then
-**Stop → Save + Analyze**. It writes `session_*.json` plus a report with an ASCII
-heat-map, a 9-zone breakdown, and the timing of every stray tap. Re-analyze a
-saved session offline:
+**Stop → Save + Analyze**. Recordings are written to `dev-tmp/` (git-ignored) as
+`session_*.json` plus a report with an ASCII heat-map, a 9-zone breakdown, and
+the timing of every stray tap. Re-analyze a saved session offline:
 
 ```bash
-./.venv/bin/python palm_logger.py session_YYYYMMDD_HHMMSS.json
+./.venv/bin/python palm_logger.py dev-tmp/session_YYYYMMDD_HHMMSS.json
 ```
 
 Requires `python3-pyqt6` (`sudo apt install python3-pyqt6`) for the GUI.
